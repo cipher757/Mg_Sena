@@ -1,1 +1,15 @@
-<p>mega-sena works!</p>
+<div>
+    <h2>Mega Sena</h2>
+  
+    <label for="numerosSorteados">Números Sorteados:</label>
+    <input type="text" id="numerosSorteados" [(ngModel)]="numerosSorteados" />
+  
+    <label for="aposta">Sua Aposta:</label>
+    <input type="text" id="aposta" [(ngModel)]="aposta" />
+  
+    <button (click)="checkNumeros()">Check</button>
+  
+    <div *ngIf="resultado !== null">
+      <p>Você pegou {{ resultado }} !</p>
+    </div>
+  </div>
